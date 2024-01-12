@@ -24,7 +24,7 @@ X_test = TASK_B['test_images'].reshape(TASK_B['test_images'].shape[0], -1)
 y_test = TASK_B['test_labels'].ravel()
 
 # Training the random forest on the training sets
-rf_clf = RandomForestClassifier(n_estimators=10, max_depth=12, n_jobs=-1)  # For analysis, n_estimators will change to 1, 10, 500 seperately to discuss the effect on prediction accuracy
+rf_clf = RandomForestClassifier(n_estimators=100, max_depth=12, n_jobs=-1)  # For analysis, n_estimators will change to 1, 10, 500 seperately to discuss the effect on prediction accuracy
                                                                             # For analysis, max_depth will change to 5, 10, 25 seperately to discuss the effect on prediction accuracy
 rf_clf.fit(X_train, y_train)
 
